@@ -1,0 +1,6 @@
+@ProjectPilotLite.api_HostAddress = http://localhost:5286
+
+GET {{ProjectPilotLite.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
