@@ -1,0 +1,55 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ProjectPilotLite.Avalonia.ViewModels"
+        x:Class="ProjectPilotLite.Avalonia.MainWindow"
+        x:DataType="vm:DashboardViewModel"
+        Title="ProjectPilot Lite" Width="820" Height="560">
+    <StackPanel Margin="20" Spacing="16">
+        <StackPanel Orientation="Horizontal" Spacing="12">
+            <TextBlock Text="Tableau de bord" FontSize="24" FontWeight="SemiBold" VerticalAlignment="Center" />
+            <Button Content="Rafraîchir" Command="{Binding RefreshCommand}" />
+        </StackPanel>
+
+        <TextBlock Text="{Binding ErrorMessage}" Foreground="#DC2626"
+                   IsVisible="{Binding HasError}" TextWrapping="Wrap" />
+
+        <WrapPanel>
+            <Border Background="#F3F4F6" CornerRadius="8" Padding="18" Margin="0,0,12,12" MinWidth="180">
+                <StackPanel>
+                    <TextBlock Text="{Binding Stats.TotalProjects}" FontSize="30" FontWeight="Bold" />
+                    <TextBlock Text="Projets au total" Foreground="#4B5563" Margin="0,6,0,0" />
+                </StackPanel>
+            </Border>
+            <Border Background="#F3F4F6" CornerRadius="8" Padding="18" Margin="0,0,12,12" MinWidth="180">
+                <StackPanel>
+                    <TextBlock Text="{Binding Stats.ProjectsInProgress}" FontSize="30" FontWeight="Bold" />
+                    <TextBlock Text="Projets en cours" Foreground="#4B5563" Margin="0,6,0,0" />
+                </StackPanel>
+            </Border>
+            <Border Background="#F3F4F6" CornerRadius="8" Padding="18" Margin="0,0,12,12" MinWidth="180">
+                <StackPanel>
+                    <TextBlock Text="{Binding Stats.ProjectsBlocked}" FontSize="30" FontWeight="Bold" />
+                    <TextBlock Text="Projets bloqués" Foreground="#4B5563" Margin="0,6,0,0" />
+                </StackPanel>
+            </Border>
+            <Border Background="#F3F4F6" CornerRadius="8" Padding="18" Margin="0,0,12,12" MinWidth="180">
+                <StackPanel>
+                    <TextBlock Text="{Binding Stats.TotalTasks}" FontSize="30" FontWeight="Bold" />
+                    <TextBlock Text="Tâches au total" Foreground="#4B5563" Margin="0,6,0,0" />
+                </StackPanel>
+            </Border>
+            <Border Background="#F3F4F6" CornerRadius="8" Padding="18" Margin="0,0,12,12" MinWidth="180">
+                <StackPanel>
+                    <TextBlock Text="{Binding Stats.CompletedTasks}" FontSize="30" FontWeight="Bold" />
+                    <TextBlock Text="Tâches terminées" Foreground="#4B5563" Margin="0,6,0,0" />
+                </StackPanel>
+            </Border>
+            <Border Background="#F3F4F6" CornerRadius="8" Padding="18" Margin="0,0,12,12" MinWidth="180">
+                <StackPanel>
+                    <TextBlock Text="{Binding Stats.SubmittedDeliverables}" FontSize="30" FontWeight="Bold" />
+                    <TextBlock Text="Livrables déposés" Foreground="#4B5563" Margin="0,6,0,0" />
+                </StackPanel>
+            </Border>
+        </WrapPanel>
+    </StackPanel>
+</Window>
