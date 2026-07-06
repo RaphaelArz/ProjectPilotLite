@@ -3,7 +3,7 @@ using System;
 
 namespace ProjectPilotLite.Core.Entities;
 
-public class Task
+public class ProjectTask
 {
     public Guid Id { get; set; }
     public string Title { get; set; } = string.Empty;
