@@ -18,10 +18,10 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Restore
-        run: dotnet restore ProjectPilotLite.sln
+        run: dotnet restore ProjectPilotLite.slnx
 
       - name: Build
-        run: dotnet build ProjectPilotLite.sln --configuration Release --no-restore
+        run: dotnet build ProjectPilotLite.slnx --configuration Release --no-restore
 
       - name: Publish API
         run: dotnet publish ProjectPilotLite.Api/ProjectPilotLite.Api.csproj --configuration Release --no-build --output publish/api
@@ -38,11 +38,11 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Restore (filtre sans WPF)
-        run: dotnet restore ProjectPilotLite.Local.slnf
+      - name: Restore
+        run: dotnet restore ProjectPilotLite.slnx
 
-      - name: Build (filtre sans WPF)
-        run: dotnet build ProjectPilotLite.Local.slnf --configuration Release --no-restore
+      - name: Build
+        run: dotnet build ProjectPilotLite.slnx --configuration Release --no-restore
 
       - name: Publish API
-        run: dotnet publish ProjectPilotLite.Api/ProjectPilotLite.Api.csproj --configuration Release --no-build --output publish/api
+        run: dotnet publish ProjectPilotLite.Api/ProjectPilotLite.Api.csproj --configuration Release --output publish/api
