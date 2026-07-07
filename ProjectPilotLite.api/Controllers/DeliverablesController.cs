@@ -52,7 +52,7 @@ public class DeliverablesController : ControllerBase
     }
 
     /// <summary>
-    /// creer un livrables lié a un projet.
+    /// creer un livrable lié a un projet.
     /// </summary>
     /// <param name="projectId">Identifiant du livre.</param>
     /// <response code="201">créé avec succès</response>
