@@ -54,7 +54,8 @@ public class DeliverablesController : ControllerBase
     /// <summary>
     /// creer un livrable lié a un projet.
     /// </summary>
-    /// <param name="projectId">Identifiant du livre.</param>
+    /// <param name="projectId">Identifiant du projet.</param>
+    /// <param name="dto">Données du livrable à créer.</param>
     /// <response code="201">créé avec succès</response>
     /// <response code="404">Données invalides, id du projet invalide/inexistant </response>
     [HttpPost("api/projects/{projectId:guid}/deliverables")]
@@ -76,6 +77,7 @@ public class DeliverablesController : ControllerBase
     /// Met à jour le statut d'un livrable.
     /// </summary>
     /// <param name="id">Identifiant du livrable.</param>
+    /// <param name="dto">Nouveau statut du livrable (et commentaire optionnel).</param>
     /// <response code="204">Statut mis à jour avec succès.</response>
     /// <response code="404">Livrable introuvable.</response>
     [HttpPatch("api/deliverables/{id:guid}/status")]
