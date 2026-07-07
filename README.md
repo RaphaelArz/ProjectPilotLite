@@ -111,3 +111,4 @@ Le projet utilise **GitHub Actions** pour automatiser la vérification du code. 
 Le pipeline détecte automatiquement les erreurs de compilation avant intégration sur la branche principale.
 
 _Une capture d'écran d'un pipeline réussi est jointe au livrable final conformément aux consignes du projet._
+![img.png](img.png)
